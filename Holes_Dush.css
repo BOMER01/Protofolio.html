@@ -1,0 +1,229 @@
+/* --- Variables & Reset --- */
+:root {
+    --brand-dark: #062c30;
+    --brand-darker: #041f21;
+    --brand-cyan: #17e9e0;
+    --brand-teal: #0d7b7b;
+    --text-main: #e0f7f6;
+    --text-muted: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top right, var(--brand-teal), var(--brand-dark) 60%);
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background: rgba(4, 31, 33, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(23, 233, 224, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: var(--brand-cyan);
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--brand-cyan);
+}
+
+/* --- Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 span {
+    color: var(--brand-cyan);
+}
+
+.hero p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background: var(--brand-cyan);
+    color: var(--brand-darker);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(23, 233, 224, 0.4);
+}
+
+.btn-outline {
+    border: 2px solid var(--brand-cyan);
+    color: var(--brand-cyan);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-outline:hover {
+    background: rgba(23, 233, 224, 0.1);
+}
+
+/* --- Grid & Cards --- */
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: rgba(4, 31, 33, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(23, 233, 224, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--brand-cyan);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.badge {
+    background: rgba(23, 233, 224, 0.15);
+    color: var(--brand-cyan);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background: var(--brand-cyan);
+    color: var(--brand-darker);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* --- YouTube Section --- */
+.yt-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+    padding: 3rem;
+    border-radius: 30px;
+}
+
+.video-wrapper {
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid rgba(23, 233, 224, 0.2);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.yt-link {
+    color: var(--brand-cyan);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+.footer {
+    border-top: 1px solid rgba(23, 233, 224, 0.1);
+    padding: 3rem 0;
+    margin-top: 5rem;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invert {
+    filter: invert(1);
+    width: 30px;
+}

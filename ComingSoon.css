@@ -1,0 +1,42 @@
+/* --- Coming Soon Hover Effect --- */
+
+/* 1. The button state for Coming Soon */
+.card.coming-soon .btn-card {
+    background: #1e293b; /* Dark gray default */
+    color: #94a3b8;
+    cursor: not-allowed;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* 2. Hover state: Button turns pure black */
+.card.coming-soon:hover .btn-card {
+    background: #000000 !important;
+    color: var(--brand-cyan);
+    border-color: var(--brand-cyan);
+    padding-right: 40px; /* Make space for the icon */
+}
+
+/* 3. The Icon (Clock or Lock) appearing on hover */
+.card.coming-soon .btn-card::after {
+    content: '🕒'; /* You can change this to 🔒 or any icon */
+    position: absolute;
+    right: 15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.card.coming-soon:hover .btn-card::after {
+    opacity: 1;
+}
+
+/* Optional: Make the image grayscale until hovered */
+.card.coming-soon img {
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.card.coming-soon:hover img {
+    filter: grayscale(0.5); /* Keeps it looking 'unreleased' even on hover */
+}
